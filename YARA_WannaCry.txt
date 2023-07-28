@@ -1,0 +1,24 @@
+rule WannaCry {
+    meta:
+        description = "YARA rule for WannaCry ransomware"
+    strings:
+        $s1 = "www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com"
+        $s3 = "qeriuwjhrf"
+        $s4 = "tasksche.exe"
+        $bitcoin1 = "13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94"
+        $bitcoin2 = "12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw"
+        $bitcoin3 = "115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn"
+        $s5 = "t.wnry" 
+        $s6 = "WNcry@2ol7" 
+        $s7 = "WANACRY!"
+        $s8 = "c.wnry" 
+        $s10= "icacls . /grant Everyone:F /T /C /Q"
+        $s11= "CryptDecrypt"
+        $s12= "Microsoft Enhanced RSA and AES Cryptographic"
+        $s13= " WanaCrypt0r"
+        $s14= "WNcry@2ol7" 
+    condition:
+        any of them
+}
+
+
